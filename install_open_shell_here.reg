@@ -1,0 +1,29 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\OpenCmdHereCustom]
+@="在此处打开 CMD"
+"Icon"="%SystemRoot%\\System32\\cmd.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\OpenCmdHereCustom\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\OpenCmdHereCustom]
+@="在此处打开 CMD"
+"Icon"="%SystemRoot%\\System32\\cmd.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\OpenCmdHereCustom\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\OpenPwsh7HereCustom]
+@="在此处打开 PowerShell 7"
+"Icon"="C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\OpenPwsh7HereCustom\command]
+@="\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -NoExit -WorkingDirectory \"%V\""
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\OpenPwsh7HereCustom]
+@="在此处打开 PowerShell 7"
+"Icon"="C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\OpenPwsh7HereCustom\command]
+@="\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -NoExit -WorkingDirectory \"%1\""

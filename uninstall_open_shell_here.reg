@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+[-HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\OpenCmdHereCustom]
+
+[-HKEY_CURRENT_USER\Software\Classes\Directory\shell\OpenCmdHereCustom]
+
+[-HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\OpenPwsh7HereCustom]
+
+[-HKEY_CURRENT_USER\Software\Classes\Directory\shell\OpenPwsh7HereCustom]
