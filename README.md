@@ -29,13 +29,12 @@
 - Windows
 - 如果要使用 `在此处打开 PowerShell 7`，请先安装 [PowerShell 7](https://github.com/PowerShell/PowerShell)
 
-默认 PowerShell 7 路径为：
+脚本中的命令直接调用 `pwsh.exe`（依赖 PATH），兼容以下两种安装方式：
 
-```text
-C:\Program Files\PowerShell\7\pwsh.exe
-```
+- MSI 安装：`pwsh.exe` 位于 `C:\Program Files\PowerShell\7\`，由安装器加入 PATH
+- Microsoft Store / `winget` 安装：通过 `%LocalAppData%\Microsoft\WindowsApps\` 下的 App Execution Alias 提供
 
-如果你的安装路径不同，请先编辑注册表脚本中的可执行文件路径。
+菜单图标使用 MSI 路径 `C:\Program Files\PowerShell\7\pwsh.exe`。若通过 Store 安装（实际路径为 `C:\Program Files\WindowsApps\Microsoft.PowerShell_*_x64_*\pwsh.exe`，版本号会随更新变化），图标可能显示为默认图标，但菜单项仍可正常工作。如需精确图标，可编辑注册表脚本中的 `Icon` 值指向本机实际的 `pwsh.exe` 路径。
 
 ### 安装方法
 
@@ -117,13 +116,12 @@ It is intended for people who want a minimal, double-clickable `.reg` solution w
 - Windows
 - [PowerShell 7](https://github.com/PowerShell/PowerShell) if you want the PowerShell 7 menu entry
 
-The default PowerShell 7 path used by the script is:
+The command invokes `pwsh.exe` directly via PATH, so both installation methods are supported:
 
-```text
-C:\Program Files\PowerShell\7\pwsh.exe
-```
+- MSI install: `pwsh.exe` lives in `C:\Program Files\PowerShell\7\`, which the installer adds to PATH.
+- Microsoft Store / `winget` install: `pwsh.exe` is exposed via the App Execution Alias in `%LocalAppData%\Microsoft\WindowsApps\`.
 
-If PowerShell 7 is installed elsewhere, update the executable path in the registry script before importing it.
+The menu icon uses the MSI path `C:\Program Files\PowerShell\7\pwsh.exe`. For Store installs (the actual binary is at `C:\Program Files\WindowsApps\Microsoft.PowerShell_*_x64_*\pwsh.exe`, a versioned path that changes on upgrade), Windows may fall back to a generic icon but the menu entry still works. If you want a precise icon, edit the `Icon` value in the registry script to point to your actual `pwsh.exe`.
 
 ### Installation
 
